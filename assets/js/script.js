@@ -37,24 +37,36 @@ $(document).ready(function () {
         }, 500, 'linear')
     });
 
-    // <!-- emailjs to mail contact form data -->
-    $("#contact-form").submit(function (event) {
-        emailjs.init("user_TTDmetQLYgWCLzHTDgqxm");
-
-        emailjs.sendForm('contact_service', 'template_contact', '#contact-form')
-            .then(function (response) {
-                console.log('SUCCESS!', response.status, response.text);
-                document.getElementById("contact-form").reset();
-                alert("Form Submitted Successfully");
-            }, function (error) {
-                console.log('FAILED...', error);
-                alert("Form Submission Failed! Try Again");
-            });
-        event.preventDefault();
-    });
-    // <!-- emailjs to mail contact form data -->
-
 });
+
+// <!-- Web3Forms to mail contact form data -->
+function handleSubmit(event) {
+    event.preventDefault();
+    const form = document.getElementById('contact-form');
+    const formData = new FormData(form);
+
+    fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: formData
+    })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                console.log('SUCCESS!', data);
+                form.reset();
+                alert('Form Submitted Successfully! You will receive an email shortly.');
+            } else {
+                console.log('FAILED...', data);
+                alert('Form Submission Failed! Try Again');
+            }
+        })
+        .catch(error => {
+            console.log('ERROR...', error);
+            alert('An error occurred. Please try again.');
+        });
+    return false;
+}
+// <!-- Web3Forms to mail contact form data -->
 
 document.addEventListener('visibilitychange',
     function () {

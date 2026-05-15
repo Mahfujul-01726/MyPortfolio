@@ -424,7 +424,9 @@
         <div class="image-box">
           <img draggable="false" src="./assets/images/contact1.png" alt="">
         </div>
-        <form id="contact-form">
+        <form id="contact-form" method="POST" action="https://api.web3forms.com/submit"
+          onsubmit="return handleSubmit(event)">
+          <input type="hidden" name="access_key" value="e3ead9f8-1f30-4667-be7c-c72e56dc6a35">
 
           <div class="form-group">
             <div class="field">
@@ -432,7 +434,7 @@
               <i class='fas fa-user'></i>
             </div>
             <div class="field">
-              <input type="text" name="email" placeholder="Email" required>
+              <input type="email" name="email" placeholder="Email" required>
               <i class='fas fa-envelope'></i>
             </div>
             <div class="field">
