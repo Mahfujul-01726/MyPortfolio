@@ -177,7 +177,7 @@ class ScrollReveal {
 
         // Observe all sections and cards
         const elements = document.querySelectorAll(
-            'section, .box, .bar, .social-icons a'
+            'section, .box, .bar, .social-icons a, .timeline, .container'
         );
         elements.forEach(el => {
             el.classList.add('scroll-reveal');
