@@ -89,19 +89,109 @@ async function fetchData(type = "skills") {
     return data;
 }
 
-function showSkills(skills) {
+// Enhanced interactive skills display
+function showSkills(skillsData) {
     let skillsContainer = document.getElementById("skillsContainer");
     let skillHTML = "";
-    skills.forEach(skill => {
-        skillHTML += `
-        <div class="bar">
-              <div class="info">
-                <img src=${skill.icon} alt="skill" />
-                <span>${skill.name}</span>
-              </div>
-            </div>`
+    let currentFilter = "all";
+
+    // Store all skills with their categories
+    const allSkills = [];
+    const categories = {
+        frontend: skillsData.frontend || [],
+        backend: skillsData.backend || [],
+        datascience: skillsData.datascience || [],
+        databases: skillsData.databases || [],
+        tools: skillsData.tools || []
+    };
+
+    // Flatten skills for filtering
+    for (const [category, skills] of Object.entries(categories)) {
+        skills.forEach(skill => {
+            allSkills.push({ ...skill, category });
+        });
+    }
+
+    // Function to render skills
+    function renderSkills(filter = "all") {
+        skillHTML = "";
+        let filteredSkills = filter === "all" ? allSkills : allSkills.filter(s => s.category === filter);
+
+        filteredSkills.forEach((skill, index) => {
+            const proficiency = skill.proficiency || 80;
+            const projectsHtml = skill.projects && skill.projects.length > 0
+                ? skill.projects.map(p => `<span class="project-tag" title="${p}">${p}</span>`).join('')
+                : '<span class="project-tag" style="opacity: 0.5;">No projects yet</span>';
+
+            skillHTML += `
+                <div class="skill-card fade-in" data-category="${skill.category}" style="animation-delay: ${index * 0.05}s">
+                    <div class="skill-content">
+                        <div class="skill-icon">
+                            <img src="${skill.icon}" alt="${skill.name}" loading="lazy" />
+                        </div>
+                        <h3 class="skill-name">${skill.name}</h3>
+                        <p class="skill-description">${skill.description || 'Expert in this technology'}</p>
+                        
+                        <div class="proficiency-container">
+                            <div class="proficiency-label">
+                                <span>Proficiency</span>
+                                <span>${proficiency}%</span>
+                            </div>
+                            <div class="proficiency-bar">
+                                <div style="--proficiency: ${proficiency}%"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-projects">
+                            ${projectsHtml}
+                        </div>
+                        
+                        <div class="skill-category">${skill.category}</div>
+                    </div>
+                </div>
+            `;
+        });
+
+        skillsContainer.innerHTML = skillHTML;
+        attachSkillCardHovers();
+    }
+
+    // Attach hover effects and animations
+    function attachSkillCardHovers() {
+        const skillCards = document.querySelectorAll(".skill-card");
+        skillCards.forEach(card => {
+            card.addEventListener('mouseenter', function () {
+                this.style.animation = 'none';
+                setTimeout(() => {
+                    this.style.animation = '';
+                }, 10);
+            });
+        });
+    }
+
+    // Initial render
+    renderSkills();
+
+    // Setup filter buttons
+    const filterButtons = document.querySelectorAll(".filter-btn");
+    filterButtons.forEach(btn => {
+        btn.addEventListener("click", function () {
+            // Update active state
+            document.querySelectorAll(".filter-btn").forEach(b => b.classList.remove("active"));
+            this.classList.add("active");
+
+            const filter = this.getAttribute("data-filter");
+            currentFilter = filter;
+
+            // Animate skills out and in
+            const skillCards = document.querySelectorAll(".skill-card");
+            skillCards.forEach(card => card.classList.add("fade-out"));
+
+            setTimeout(() => {
+                renderSkills(filter);
+            }, 200);
+        });
     });
-    skillsContainer.innerHTML = skillHTML;
 }
 
 function showProjects(projects) {
@@ -159,9 +249,6 @@ VanillaTilt.init(document.querySelectorAll(".tilt"), {
     max: 15,
 });
 // <!-- tilt js effect ends -->
-
-
-// pre loader start
 // function loader() {
 //     document.querySelector('.loader-container').classList.add('fade-out');
 // }

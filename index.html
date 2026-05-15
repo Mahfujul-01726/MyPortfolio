@@ -136,16 +136,31 @@
 
     <h2 class="heading"><i class="fas fa-laptop-code"></i> Skills & <span>Abilities</span></h2>
 
+    <!-- Skills Category Filters -->
+    <div class="skills-filters">
+      <button class="filter-btn active" data-filter="all">
+        <i class="fas fa-star"></i> All Skills
+      </button>
+      <button class="filter-btn" data-filter="frontend">
+        <i class="fas fa-paint-brush"></i> Frontend
+      </button>
+      <button class="filter-btn" data-filter="backend">
+        <i class="fas fa-server"></i> Backend
+      </button>
+      <button class="filter-btn" data-filter="datascience">
+        <i class="fas fa-brain"></i> Data Science
+      </button>
+      <button class="filter-btn" data-filter="databases">
+        <i class="fas fa-database"></i> Databases
+      </button>
+      <button class="filter-btn" data-filter="tools">
+        <i class="fas fa-tools"></i> Tools
+      </button>
+    </div>
+
     <div class="container">
-      <div class="row" id="skillsContainer">
-
-        <!-- <div class="bar">
-              <div class="info">
-                <img src="https://img.icons8.com/color/48/000000/adobe-xd.png"/>
-                <span>AdobeXD</span>
-              </div>
-            </div> -->
-
+      <div class="skills-grid" id="skillsContainer">
+        <!-- Skills will be loaded here dynamically -->
       </div>
     </div>
   </section>

@@ -1,53 +1,191 @@
-[
-    {
-        "name": "Bootstrap",
-        "icon": "https://img.icons8.com/color/48/000000/bootstrap.png"
-    },
-
-    {
-        "name": "HTML5",
-        "icon": "https://img.icons8.com/color/48/000000/html-5--v1.png"
-    },
-    {
-        "name": "CSS3",
-        "icon": "https://img.icons8.com/color/48/000000/css3.png"
-    },
-    {
-        "name": "JavaScript",
-        "icon": "https://img.icons8.com/color/48/000000/javascript--v1.png"
-    },
-    {
-        "name": "Java",
-        "icon": "https://img.icons8.com/color/48/000000/java-coffee-cup-logo--v1.png"
-    },
-
-    {
-        "name": "PHP",
-        "icon": "https://img.icons8.com/offices/48/000000/php-logo.png"
-    },
-    {
-        "name": "Python",
-        "icon": "https://img.icons8.com/color/48/000000/python--v1.png"
-    },
-    {
-        "name": "C++",
-        "icon": "https://img.icons8.com/color/48/000000/c-plus-plus-logo.png"
-    },
-    {
-        "name": "MongoDB",
-        "icon": "https://img.icons8.com/color/48/000000/mongodb.png"
-    },
-    {
-        "name": "MySQL",
-        "icon": "https://img.icons8.com/color/48/000000/mysql-logo.png"
-    },
-    {
-        "name": "PostgreSQL",
-        "icon": "https://img.icons8.com/color/48/000000/postgreesql.png"
-    },
-
-    {
-        "name": "GitHub",
-        "icon": "https://img.icons8.com/glyph-neue/48/ffffff/github.png"
-    }    
-]
+{
+    "frontend": [
+        {
+            "name": "HTML5",
+            "icon": "https://img.icons8.com/color/96/000000/html-5--v1.png",
+            "proficiency": 95,
+            "projects": [
+                "Weather-app",
+                "MyPortfolio"
+            ],
+            "description": "Semantic HTML structure and accessibility"
+        },
+        {
+            "name": "CSS3",
+            "icon": "https://img.icons8.com/color/96/000000/css3.png",
+            "proficiency": 90,
+            "projects": [
+                "MyPortfolio"
+            ],
+            "description": "Responsive design, animations, flexbox, grid"
+        },
+        {
+            "name": "JavaScript",
+            "icon": "https://img.icons8.com/color/96/000000/javascript--v1.png",
+            "proficiency": 85,
+            "projects": [
+                "MyPortfolio",
+                "Weather-app"
+            ],
+            "description": "ES6+, DOM manipulation, async/await"
+        },
+        {
+            "name": "Bootstrap",
+            "icon": "https://img.icons8.com/color/96/000000/bootstrap.png",
+            "proficiency": 80,
+            "projects": [
+                "MyPortfolio"
+            ],
+            "description": "Responsive UI components and grid system"
+        }
+    ],
+    "backend": [
+        {
+            "name": "Python",
+            "icon": "https://img.icons8.com/color/96/000000/python--v1.png",
+            "proficiency": 92,
+            "projects": [
+                "Deep-Learning-Basics",
+                "End-To-End-Machine-Learning-Project-Implementaion",
+                "Object-Oriented-Programming-in-Python--",
+                "AI-Agent-Using-CrewAI"
+            ],
+            "description": "OOP, async, data manipulation, scripting"
+        },
+        {
+            "name": "PHP",
+            "icon": "https://img.icons8.com/offices/96/000000/php-logo.png",
+            "proficiency": 75,
+            "projects": [],
+            "description": "Server-side scripting and web applications"
+        },
+        {
+            "name": "Java",
+            "icon": "https://img.icons8.com/color/96/000000/java-coffee-cup-logo--v1.png",
+            "proficiency": 78,
+            "projects": [],
+            "description": "OOP principles and enterprise applications"
+        },
+        {
+            "name": "C++",
+            "icon": "https://img.icons8.com/color/96/000000/c-plus-plus-logo.png",
+            "proficiency": 82,
+            "projects": [
+                "Beecrowd-Solution",
+                "Codeforce-Solution"
+            ],
+            "description": "Competitive programming and algorithms"
+        },
+        {
+            "name": "Dart",
+            "icon": "https://img.icons8.com/color/96/000000/dart.png",
+            "proficiency": 65,
+            "projects": [
+                "Dart_Language"
+            ],
+            "description": "Mobile development fundamentals"
+        },
+        {
+            "name": "TypeScript",
+            "icon": "https://img.icons8.com/color/96/000000/typescript.png",
+            "proficiency": 70,
+            "projects": [
+                "university"
+            ],
+            "description": "Type-safe JavaScript development"
+        }
+    ],
+    "datascience": [
+        {
+            "name": "Machine Learning",
+            "icon": "https://img.icons8.com/color/96/000000/machine-learning.png",
+            "proficiency": 88,
+            "projects": [
+                "End-To-End-Machine-Learning-Project-Implementaion",
+                "Deep-Learning-Basics"
+            ],
+            "description": "Supervised & unsupervised learning, model optimization"
+        },
+        {
+            "name": "Deep Learning",
+            "icon": "https://img.icons8.com/color/96/000000/neural-network.png",
+            "proficiency": 85,
+            "projects": [
+                "Deep-Learning-Basics",
+                "Artificial-Neural-Network",
+                "Recurrent-Neural-Network"
+            ],
+            "description": "Neural networks, CNN, RNN, TensorFlow, Keras"
+        },
+        {
+            "name": "AI Agents",
+            "icon": "https://img.icons8.com/color/96/000000/artificial-intelligence.png",
+            "proficiency": 80,
+            "projects": [
+                "AI-Agent-Using-CrewAI"
+            ],
+            "description": "CrewAI, LLMs, autonomous agents"
+        },
+        {
+            "name": "Data Analysis",
+            "icon": "https://img.icons8.com/color/96/000000/data.png",
+            "proficiency": 85,
+            "projects": [
+                "Research-Work"
+            ],
+            "description": "Pandas, NumPy, data visualization, EDA"
+        }
+    ],
+    "databases": [
+        {
+            "name": "MongoDB",
+            "icon": "https://img.icons8.com/color/96/000000/mongodb.png",
+            "proficiency": 80,
+            "projects": [],
+            "description": "NoSQL database design and queries"
+        },
+        {
+            "name": "MySQL",
+            "icon": "https://img.icons8.com/color/96/000000/mysql-logo.png",
+            "proficiency": 82,
+            "projects": [
+                "SQL_BASICS"
+            ],
+            "description": "Relational databases and SQL optimization"
+        },
+        {
+            "name": "PostgreSQL",
+            "icon": "https://img.icons8.com/color/96/000000/postgreesql.png",
+            "proficiency": 78,
+            "projects": [],
+            "description": "Advanced PostgreSQL features and optimization"
+        }
+    ],
+    "tools": [
+        {
+            "name": "GitHub",
+            "icon": "https://img.icons8.com/glyph-neue/96/000000/github.png",
+            "proficiency": 90,
+            "projects": [
+                "All"
+            ],
+            "description": "Version control, collaboration, workflow automation"
+        },
+        {
+            "name": "Git",
+            "icon": "https://img.icons8.com/color/96/000000/git.png",
+            "proficiency": 88,
+            "projects": [
+                "All"
+            ],
+            "description": "Branching, merging, rebasing, and conflict resolution"
+        },
+        {
+            "name": "Docker",
+            "icon": "https://img.icons8.com/color/96/000000/docker.png",
+            "proficiency": 65,
+            "projects": [],
+            "description": "Containerization and deployment"
+        }
+    ]
+}
