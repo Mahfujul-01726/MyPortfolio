@@ -72,11 +72,9 @@ document.addEventListener('visibilitychange',
     function () {
         if (document.visibilityState === "visible") {
             document.title = "Welcome To Mahfuj's Portfolio";
-            $("#favicon").attr("href", "assets/images/favicon.png");
         }
         else {
             document.title = "Come Back To Portfolio";
-            $("#favicon").attr("href", "assets/images/favhand.png");
         }
     });
 
@@ -220,8 +218,8 @@ function showProjects(projects) {
         <div class="desc">
           <p>${project.desc}</p>
           <div class="btns">
-            <a href="${project.links.view}" class="btn" target="_blank"><i class="fas fa-eye"></i> View</a>
-            <a href="${project.links.code}" class="btn" target="_blank">Code <i class="fas fa-code"></i></a>
+            ${project.links.view ? `<a href="${project.links.view}" class="btn" target="_blank"><i class="fas fa-eye"></i> View</a>` : ''}
+            ${project.links.code ? `<a href="${project.links.code}" class="btn" target="_blank">Code <i class="fas fa-code"></i></a>` : ''}
           </div>
         </div>
       </div>
@@ -351,3 +349,14 @@ srtop.reveal('.experience .timeline .container', { interval: 400 });
 // animated via the custom ScrollReveal class in enhancements.js.
 // srtop.reveal('.contact .container', { delay: 400 });
 // srtop.reveal('.contact .container .form-group', { delay: 400 });
+
+// About section image slideshow
+const aboutImages = ["./assets/images/mahfuj.jpg", "./assets/images/mypic.jpg"];
+let currentIndex = 0;
+const aboutImg = document.getElementById("about-slideshow");
+if (aboutImg) {
+  setInterval(() => {
+    currentIndex = (currentIndex + 1) % aboutImages.length;
+    aboutImg.src = aboutImages[currentIndex];
+  }, 3000);
+}
