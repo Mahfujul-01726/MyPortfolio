@@ -346,5 +346,8 @@ srtop.reveal('.experience .timeline', { delay: 400 });
 srtop.reveal('.experience .timeline .container', { interval: 400 });
 
 /* SCROLL CONTACT */
-srtop.reveal('.contact .container', { delay: 400 });
-srtop.reveal('.contact .container .form-group', { delay: 400 });
+// Note: Contact form intentionally excluded from ScrollReveal reset
+// to prevent form fields from becoming invisible. The heading is still
+// animated via the custom ScrollReveal class in enhancements.js.
+// srtop.reveal('.contact .container', { delay: 400 });
+// srtop.reveal('.contact .container .form-group', { delay: 400 });

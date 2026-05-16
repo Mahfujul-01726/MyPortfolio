@@ -179,10 +179,21 @@ class ScrollReveal {
         const elements = document.querySelectorAll(
             'section, .box, .bar, .social-icons a, .timeline, .container'
         );
-        elements.forEach(el => {
+        // Filter out contact section and its container to keep form visible
+        const filtered = Array.from(elements).filter(el =>
+            !el.classList.contains('contact') &&
+            !(el.classList.contains('container') && el.closest('.contact'))
+        );
+        filtered.forEach(el => {
             el.classList.add('scroll-reveal');
             observer.observe(el);
         });
+        // Still animate contact heading on scroll
+        const contactHeading = document.querySelector('.contact .heading');
+        if (contactHeading) {
+            contactHeading.classList.add('scroll-reveal');
+            observer.observe(contactHeading);
+        }
     }
 }
 
