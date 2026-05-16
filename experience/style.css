@@ -391,6 +391,15 @@ header .navbar ul li a:hover{
   border: .1rem solid rgb(180, 178, 178);
   color: #ffae00;
 }
+.footer .box-container .box .share a:has(.kaggle-icon){
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.kaggle-icon{
+  width: auto;
+  height: 1.7rem;
+}
 .footer .credit{
   padding: 1rem 0 0 0;
   text-align: center;
