@@ -11,8 +11,10 @@ $(document).ready(function () {
 
         if (window.scrollY > 60) {
             document.querySelector('#scroll-top').classList.add('active');
+            document.querySelector('header').classList.add('scrolled');
         } else {
             document.querySelector('#scroll-top').classList.remove('active');
+            document.querySelector('header').classList.remove('scrolled');
         }
 
         // scroll spy
@@ -338,6 +340,15 @@ srtop.reveal('.education .box', { interval: 200 });
 
 /* SCROLL PROJECTS */
 srtop.reveal('.work .box', { interval: 200 });
+
+/* SCROLL COURSES */
+srtop.reveal('.courses .box', { interval: 200 });
+
+/* SCROLL BLOG */
+srtop.reveal('.blog .box', { interval: 200 });
+
+/* SCROLL TECHNEWS */
+srtop.reveal('.technews .box', { interval: 200 });
 
 /* SCROLL EXPERIENCE */
 srtop.reveal('.experience .timeline', { delay: 400 });
