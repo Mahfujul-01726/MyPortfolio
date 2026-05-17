@@ -1,12 +1,22 @@
 $(document).ready(function () {
 
-    $('#menu').click(function () {
+    // Mobile menu toggle (improved: toggle both icon classes and guard DOM)
+    const $menu = $('#menu');
+    $menu.on('click', function () {
+        // toggle icons: remove/add both to ensure correct icon shown
         $(this).toggleClass('fa-times');
+        $(this).toggleClass('fa-bars');
         $('.navbar').toggleClass('nav-toggle');
     });
 
+    // Close mobile nav when a nav link is clicked
+    $('.navbar ul li a').on('click', function () {
+        $menu.removeClass('fa-times').addClass('fa-bars');
+        $('.navbar').removeClass('nav-toggle');
+    });
+
     $(window).on('scroll load', function () {
-        $('#menu').removeClass('fa-times');
+        $('#menu').removeClass('fa-times').addClass('fa-bars');
         $('.navbar').removeClass('nav-toggle');
 
         if (window.scrollY > 60) {
@@ -353,8 +363,8 @@ const aboutImages = ["./assets/images/mahfuj.jpg", "./assets/images/mypic.jpg"];
 let currentIndex = 0;
 const aboutImg = document.getElementById("about-slideshow");
 if (aboutImg) {
-  setInterval(() => {
-    currentIndex = (currentIndex + 1) % aboutImages.length;
-    aboutImg.src = aboutImages[currentIndex];
-  }, 3000);
+    setInterval(() => {
+        currentIndex = (currentIndex + 1) % aboutImages.length;
+        aboutImg.src = aboutImages[currentIndex];
+    }, 3000);
 }

@@ -294,8 +294,24 @@ header .navbar ul li a:hover{
   transform: translateX(-8px);
 }
 
-/* Media queries - Responsive timeline on screens less than 600px wide */
+/* Media queries - Responsive timeline */
+@media (max-width: 1024px) {
+  .experience { margin-top: 5rem; }
+  .experience .container { padding: 8px 30px; }
+}
+
+@media (max-width: 900px) {
+  .experience .container { padding: 8px 28px; }
+}
+
+@media (max-width: 768px) {
+  .experience { padding-top: 5rem; }
+  .experience .heading { margin-top: 2rem; }
+  .experience .container { padding: 10px 25px; }
+}
+
 @media screen and (max-width: 600px) {
+  .experience { padding-top: 5rem; }
   .experience .timeline::after {
   left: 31px;
   }
@@ -320,8 +336,25 @@ header .navbar ul li a:hover{
   left: 0%;
   }
   .experience .container::after {
-    font-size: 2.2rem;;
+    font-size: 2.2rem;
   }
+}
+
+@media screen and (max-width: 450px) {
+  .experience .container { padding-left: 6.5rem; padding-right: 1rem; }
+  .experience .container::after { width: 22px; height: 22px; font-size: 1.8rem; }
+}
+
+@media screen and (max-width: 400px) {
+  .experience .container { padding-left: 5.5rem; }
+  .experience .container::after { width: 20px; height: 20px; font-size: 1.6rem; }
+}
+
+@media screen and (max-width: 360px) {
+  .experience .container { padding-left: 5rem; padding-right: 0.5rem; }
+  .experience .container::after { width: 18px; height: 18px; font-size: 1.4rem; }
+  .experience .content .tag { font-size: 1rem; padding-top: 1rem; padding-left: 1rem; }
+  .experience .content .desc h3 { font-size: 1.2rem; }
 }
 /* experience media queries ends */
 /* experience section ends */

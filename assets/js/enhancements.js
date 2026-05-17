@@ -315,15 +315,11 @@ function setupNavbarAnimation() {
     const menu = document.getElementById('menu');
     if (!navbar || !menu) return;
 
-    menu.addEventListener('click', () => {
-        menu.classList.toggle('fa-times');
-        navbar.classList.toggle('nav-toggle');
-    });
-
     // Close navbar when clicking on a link
     document.querySelectorAll('.navbar a').forEach(link => {
         link.addEventListener('click', () => {
             menu.classList.remove('fa-times');
+            menu.classList.add('fa-bars');
             navbar.classList.remove('nav-toggle');
         });
     });
@@ -332,6 +328,7 @@ function setupNavbarAnimation() {
     document.addEventListener('click', (e) => {
         if (!e.target.closest('header') && navbar.classList.contains('nav-toggle')) {
             menu.classList.remove('fa-times');
+            menu.classList.add('fa-bars');
             navbar.classList.remove('nav-toggle');
         }
     });

@@ -326,6 +326,29 @@ header .navbar ul li a:hover{
 /* footer section ends */
 
 /* common media queries starts*/
+@media (max-width: 1024px) {
+  .page_404 { margin-top: 5rem; }
+  .wrapper { height: 350px; }
+}
+
+@media (max-width: 900px) {
+  .wrapper { height: 320px; }
+  .wrapper h1 { font-size: 7rem; }
+}
+
+@media (max-width: 768px) {
+  .page_404 { margin-top: 5rem; padding: 2rem; }
+  .wrapper { height: 30rem; }
+}
+
+@media(max-width:600px){
+  .page_404 { margin-top: 5rem; }
+  .wrapper { height: 28rem; }
+  .wrapper h1 { font-size: 6rem; }
+  .msg h3 { font-size: 3.2rem; }
+  .msg p { font-size: 1.4rem; }
+}
+
 @media(max-width:450px){
   html{
     font-size: 55%;
@@ -336,6 +359,24 @@ header .navbar ul li a:hover{
   section{
     padding: 2rem;
   }
+  .wrapper { height: 25rem; }
+  .wrapper h1 { font-size: 5rem; }
+  .msg h3 { font-size: 2.8rem; }
+}
+
+@media (max-width: 400px) {
+  .wrapper { height: 22rem; }
+  .wrapper h1 { font-size: 4.5rem; }
+  .msg h3 { font-size: 2.4rem; }
+  .msg p { font-size: 1.3rem; }
+}
+
+@media (max-width: 360px) {
+  .wrapper { height: 18rem; }
+  .wrapper h1 { font-size: 3.8rem; }
+  .msg h3 { font-size: 2rem; }
+  .backbtn .btn { padding: 1.2rem 2rem; }
+  .backbtn .btn span { font-size: 1.4rem; }
 }
 /* common media queries ends*/
 

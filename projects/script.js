@@ -1,12 +1,12 @@
 $(document).ready(function () {
 
     $('#menu').click(function () {
-        $(this).toggleClass('fa-times');
+        $(this).toggleClass('fa-times').toggleClass('fa-bars');
         $('.navbar').toggleClass('nav-toggle');
     });
 
     $(window).on('scroll load', function () {
-        $('#menu').removeClass('fa-times');
+        $('#menu').removeClass('fa-times').addClass('fa-bars');
         $('.navbar').removeClass('nav-toggle');
 
         if (window.scrollY > 60) {

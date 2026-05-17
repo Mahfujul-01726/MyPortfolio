@@ -270,16 +270,63 @@ header .navbar ul li a:hover{
   background: #310ae0f5;
 }
 
+@media (max-width: 1024px) {
+  .work .button-group { width: 70%; }
+  .work { margin-top: 5rem; }
+  .work .box-container { margin: 1.5rem; gap: 1.5rem; }
+}
+
+@media (max-width: 900px) {
+  .work .button-group { width: 80%; gap: 0.8rem; }
+  .work .button-group .btn { padding: 0.9rem 1.8rem; font-size: 1.4rem; }
+  .work .box-container { margin: 1rem; gap: 1.2rem; }
+}
+
+@media (max-width: 768px) {
+  .work { padding-top: 7rem; }
+  .work .button-group { width: 90%; gap: 0.6rem; }
+  .work .button-group .btn { padding: 0.8rem 1.5rem; font-size: 1.3rem; }
+  .work .box-container { margin: 0.8rem; }
+  .work .box-container .box { height: 26rem; }
+}
+
+@media screen and (max-width: 600px) {
+  .work { padding-top: 7rem; }
+  .work .button-group { width: 100%; }
+  .work .button-group .btn { padding: 0.7rem 1.2rem; font-size: 1.2rem; }
+  .work .box-container { margin: 0.5rem; }
+  .work .box-container .box { height: 24rem; }
+}
+
 @media screen and (max-width: 450px) {
+  .work { padding-top: 6rem; }
   .work .button-group{
     width: 100%;
   }
+  .work .button-group .btn { padding: 0.6rem 1rem; font-size: 1.1rem; }
   .work .box-container{
     margin: 0rem;
   }
   .work .box-container .grid-item .box{
     width: 95% !important;
   }
+  .work .box-container .box { height: 22rem; }
+  .work .box-container .box .content .tag h3 { font-size: 1.6rem; }
+  .work .desc p { font-size: 1.3rem; }
+  .work .desc .btns .btn { padding: 1.2rem 2rem; font-size: 1.3rem; margin-right: 1rem; }
+}
+
+@media screen and (max-width: 400px) {
+  .work .button-group .btn { padding: 0.5rem 0.8rem; font-size: 1rem; }
+  .work .box-container .box { height: 20rem; }
+}
+
+@media screen and (max-width: 360px) {
+  .work .box-container .box { height: 18rem; }
+  .work .box-container .box .content .tag { height: 3.8rem; }
+  .work .desc { margin: 1rem; }
+  .work .desc .btns { flex-direction: column; gap: 0.8rem; }
+  .work .desc .btns .btn { margin-right: 0; text-align: center; }
 }
 
 /* back to home button */

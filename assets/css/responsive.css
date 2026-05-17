@@ -1,0 +1,399 @@
+/* ============================================
+   RESPONSIVE DESIGN — ALL DEVICES
+   ============================================ */
+
+/* ===== 4K & ULTRA-WIDE (2560px+) ===== */
+@media (min-width: 2560px) {
+  html { font-size: 75%; }
+  section { padding: 4rem 12%; }
+  header { padding: 2rem 12%; }
+  .home .content h2 { font-size: 6rem; }
+  .home .content p { font-size: 3rem; }
+  .education .box-container .box { width: 70%; }
+  .research-container { grid-template-columns: repeat(3, 1fr); max-width: 1400px; margin-left: auto; margin-right: auto; }
+}
+
+/* ===== LARGE DESKTOP (1440px - 2559px) ===== */
+@media (min-width: 1440px) and (max-width: 2559px) {
+  html { font-size: 68%; }
+  section { padding: 3rem 10%; }
+  .home .content h2 { font-size: 5rem; }
+  .education .box-container .box { width: 75%; }
+  .research-container { grid-template-columns: repeat(3, 1fr); max-width: 1200px; margin-left: auto; margin-right: auto; }
+}
+
+/* ===== SMALL DESKTOP / LAPTOP (1025px - 1439px) ===== */
+@media (min-width: 1025px) and (max-width: 1439px) {
+  html { font-size: 62.5%; }
+  section { padding: 2rem 8%; }
+  header { padding: 1.7rem 8%; }
+  .education .box-container .box { width: 85%; }
+  .experience .container { width: 50%; }
+}
+
+/* ===== TABLET LANDSCAPE (901px - 1024px) ===== */
+@media (min-width: 901px) and (max-width: 1024px) {
+  html { font-size: 60%; }
+  section { padding: 2rem 6%; }
+  header { padding: 1.5rem 6%; }
+  header .navbar ul li { margin-left: 1.8rem; }
+  header .navbar ul li a { font-size: 1.4rem; }
+  .home .content h2 { font-size: 4rem; }
+  .home .content p { font-size: 2rem; }
+  .home .image img { max-width: 30rem; }
+  .about .row { padding: 2rem; }
+  .about .row .image img { width: 25rem; }
+  .education .box-container .box { width: 90%; }
+  .education .box-container .box .content h3 { font-size: 2rem; }
+  .experience .container { width: 50%; padding: 10px 30px; }
+  .research-container { grid-template-columns: repeat(2, 1fr); gap: 2rem; padding: 1.5rem; }
+  .contact .container { margin: 2rem auto; width: 95%; }
+  .contact .content .image-box { max-width: 50%; }
+  .contact .content form { width: 50%; }
+  .skills .container { width: 95%; }
+  .skills-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* ===== TABLET PORTRAIT (769px - 900px) ===== */
+@media (min-width: 769px) and (max-width: 900px) {
+  html { font-size: 58%; }
+  section { padding: 2rem 5%; }
+  header { padding: 1.5rem 5%; }
+  header .navbar ul li { margin-left: 1.5rem; }
+  header .navbar ul li a { font-size: 1.3rem; }
+  .home { flex-direction: column-reverse; text-align: center; padding-top: 8rem; gap: 1rem; }
+  .home .content { flex: 1 1 100%; }
+  .home .image { flex: 1 1 100%; }
+  .home .image img { max-width: 28rem; }
+  .home .content h2 { font-size: 3.5rem; }
+  .home .content p { font-size: 1.8rem; }
+  .socials { margin-top: 4rem; }
+  .socials .social-icons { text-align: center; }
+  .about .row { flex-direction: column; padding: 1.5rem; }
+  .about .row .image { flex: 1 1 100%; }
+  .about .row .image img { width: 22rem; margin: 2rem auto; }
+  .about .row .content { flex: 1 1 100%; padding: 2rem; }
+  .education .box-container .box { width: 95%; }
+  .education .box-container .box .image { flex: 1 1 15rem; }
+  .work .box-container .box { flex: 1 1 28rem; height: 28rem; }
+  .experience .container { width: 50%; padding: 10px 25px; }
+  .experience .container::after { right: -14px; width: 22px; height: 22px; font-size: 1.6rem; }
+  .research-container { grid-template-columns: repeat(2, 1fr); gap: 1.8rem; padding: 1rem; }
+  .courses .box-container, .blog .box-container, .technews .box-container { grid-template-columns: repeat(2, 1fr); }
+  .contact .container { margin: 2rem auto; }
+  .contact .container .content { flex-direction: column; }
+  .contact .content .image-box { display: none; }
+  .contact .content form { width: 100%; margin-right: 0; }
+  .skills .container { width: 98%; }
+  .skills-grid { grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+  .skills-filters { gap: 0.8rem; }
+  .filter-btn { padding: 0.7rem 1.4rem; font-size: 0.95rem; }
+  .footer .box-container { grid-template-columns: repeat(2, 1fr); gap: 2rem; }
+}
+
+/* ===== MOBILE LARGE (601px - 768px) ===== */
+@media (min-width: 601px) and (max-width: 768px) {
+  html { font-size: 56%; }
+  section { padding: 1.5rem 4%; }
+  header { padding: 1.2rem 4%; height: 6rem; }
+  .home { flex-direction: column-reverse; text-align: center; padding-top: 8rem; }
+  .home .content, .home .image { flex: 1 1 100%; }
+  .home .image img { max-width: 25rem; }
+  .home .content h2 { font-size: 3.2rem; }
+  .home .content p { font-size: 1.7rem; }
+  .socials { margin-top: 4rem; }
+  .socials .social-icons { text-align: center; }
+  .about .row { flex-direction: column; padding: 1rem; }
+  .about .row .image img { width: 20rem; margin: 1.5rem auto; }
+  .about .row .content { padding: 1.5rem; }
+  .heading { font-size: 2.8rem; }
+  .education .box-container .box { width: 100%; flex-direction: column; }
+  .education .box-container .box .image { flex: unset; width: 100%; height: 22rem; }
+  .education .box-container .box .content h3 { font-size: 2rem; }
+  .work .box-container { margin: 1rem; gap: 1.2rem; }
+  .work .box-container .box { flex: 1 1 26rem; height: 26rem; }
+  .research-container { grid-template-columns: repeat(2, 1fr); gap: 1.5rem; padding: 1rem; }
+  .research-card { padding: 1.5rem; }
+  .courses .box-container, .blog .box-container, .technews .box-container { grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+  .contact .container { margin: 1.5rem auto; width: 98%; }
+  .contact .container .content { flex-direction: column; padding: 1.5rem; }
+  .contact .content .image-box { display: none; }
+  .contact .content form { width: 100%; margin-right: 0; }
+  .skills .container { width: 100%; padding: 1.5rem; }
+  .skills-grid { grid-template-columns: repeat(2, 1fr); gap: 1.2rem; }
+  .skills-filters { gap: 0.6rem; }
+  .filter-btn { padding: 0.6rem 1.2rem; font-size: 0.9rem; }
+  .footer { padding: 3rem 4% 1.5rem !important; }
+  .footer .box-container { grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+  .experience .container { width: 100%; padding-left: 7rem; padding-right: 2rem; }
+  .experience .timeline::after { left: 31px; }
+  .experience .left::after, .experience .right::after { left: 15px; }
+  .experience .right { left: 0%; }
+  .experience .container::after { font-size: 2rem; }
+  .work .button-group { width: 80%; }
+}
+
+/* ===== MOBILE MEDIUM (451px - 600px) ===== */
+@media (min-width: 451px) and (max-width: 600px) {
+  html { font-size: 55%; }
+  section { padding: 1.5rem 3%; }
+  header { padding: 1rem 3%; height: 5.5rem; }
+  .home { flex-direction: column-reverse; text-align: center; padding-top: 7rem; gap: 0.5rem; min-height: 90vh; }
+  .home .content { flex: 1 1 100%; }
+  .home .image { flex: 1 1 100%; }
+  .home .image img { max-width: 22rem; }
+  .home .content h2 { font-size: 2.8rem; }
+  .home .content p { font-size: 1.6rem; }
+  .home .btn { padding: 1.4rem 2.5rem; }
+  .home .btn span { font-size: 1.5rem; }
+  .socials { margin-top: 3rem; }
+  .social-icons a { width: 38px; height: 38px; line-height: 38px; font-size: 1.7rem; }
+  .about .row { flex-direction: column; padding: 0.5rem; }
+  .about .row .image img { width: 18rem; margin: 1rem auto; }
+  .about .row .content { padding: 1rem; }
+  .about .row .content h3 { font-size: 2.2rem; }
+  .about .row .content p { font-size: 1.4rem; }
+  .heading { font-size: 2.5rem; }
+  .education .box-container .box { width: 100%; flex-direction: column; }
+  .education .box-container .box .image { width: 100%; height: 20rem; }
+  .education .box-container .box .content h3 { font-size: 1.8rem; }
+  .education h4 { font-size: 1.6rem; }
+  .work .box-container { margin: 0.5rem; gap: 1rem; }
+  .work .box-container .box { flex: 1 1 100%; height: 25rem; }
+  .work .viewall .btn { padding: 1.4rem 2.5rem; }
+  .research-container { grid-template-columns: 1fr; gap: 1.5rem; padding: 0.5rem; }
+  .courses .box-container, .blog .box-container, .technews .box-container { grid-template-columns: 1fr; gap: 1.2rem; }
+  .courses .box img { height: 15rem; }
+  .contact .container { margin: 1rem auto; width: 100%; }
+  .contact .container .content { flex-direction: column; padding: 1rem; }
+  .contact .content .image-box { display: none; }
+  .contact .content form { width: 100%; margin-right: 0; }
+  .contact form .field input, .contact form .message textarea { font-size: 1.4rem; padding: 0 12px 0 45px !important; }
+  form i { left: 10px; font-size: 14px; }
+  .skills .container { width: 100%; padding: 1rem; }
+  .skills-grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+  .skills-filters { gap: 0.5rem; flex-wrap: wrap; }
+  .filter-btn { padding: 0.5rem 1rem; font-size: 0.85rem; }
+  .filter-btn i { display: none; }
+  .skill-card { padding: 1.2rem; }
+  .skill-icon { width: 70px; height: 70px; }
+  .skill-icon img { width: 50px; height: 50px; }
+  .skill-name { font-size: 1.1rem; }
+  .footer { padding: 3rem 3% 1.5rem !important; }
+  .footer .box-container { grid-template-columns: 1fr; gap: 2rem; }
+  .footer .box-container .box { margin: 0; }
+  .footer .box-container .box h3 { font-size: 2rem; }
+  .experience { min-height: auto; }
+  .experience .timeline { margin-top: 1.5rem; }
+  .experience .timeline::after { left: 31px; }
+  .experience .container { width: 100%; padding-left: 7rem; padding-right: 1.5rem; }
+  .experience .container::after { left: 15px; font-size: 1.8rem; width: 22px; height: 22px; }
+  .experience .left::after { left: 15px; }
+  .experience .right::after { left: 15px; }
+  .experience .right { left: 0%; }
+  .experience .container::before { left: 61px; }
+  .experience .content .tag { font-size: 1.1rem; padding-top: 1.2rem; }
+  .experience .content .desc h3 { font-size: 1.3rem; }
+  .morebtn .btn { padding: 1.4rem 2.5rem; }
+  .morebtn .btn span { font-size: 1.5rem; }
+  .work .button-group { width: 100%; }
+  .work .button-group .btn { padding: 0.8rem 1.5rem; font-size: 1.3rem; }
+  .backbtn .btn { padding: 1.4rem 2.5rem; }
+  .backbtn .btn span { font-size: 1.5rem; }
+  .page_404 .wrapper { height: 30rem; }
+  .wrapper h1 { font-size: 6rem; }
+  .msg h3 { font-size: 3rem; }
+  .msg p { font-size: 1.4rem; }
+}
+
+/* ===== MOBILE SMALL (401px - 450px) ===== */
+@media (min-width: 401px) and (max-width: 450px) {
+  html { font-size: 54%; }
+  section { padding: 1.5rem 2.5%; }
+  header { padding: 1rem 2.5%; height: 5rem; }
+  .home { flex-direction: column-reverse; text-align: center; padding-top: 6.5rem; min-height: 85vh; }
+  .home .image img { max-width: 20rem; }
+  .home .content h2 { font-size: 2.5rem; }
+  .home .content p { font-size: 1.5rem; }
+  .socials { margin-top: 2.5rem; }
+  .social-icons a { width: 36px; height: 36px; line-height: 36px; font-size: 1.5rem; }
+  .about .row .image img { width: 16rem; }
+  .about .row .content h3 { font-size: 2rem; }
+  .heading { font-size: 2.2rem; }
+  .education .box-container .box .image { height: 18rem; }
+  .education .box-container .box .content h3 { font-size: 1.7rem; }
+  .research-container { grid-template-columns: 1fr; padding: 0.5rem; }
+  .research-card { padding: 1.2rem; }
+  .research-card h3 { font-size: 1.3rem; }
+  .research-card p { font-size: 1rem; }
+  .courses .box-container, .blog .box-container, .technews .box-container { grid-template-columns: 1fr; }
+  .courses .box h3, .blog .box h3, .technews .box h3 { font-size: 1.8rem; }
+  .contact form .field input, .contact form .message textarea { font-size: 1.3rem; padding: 0 10px 0 40px !important; }
+  form i { left: 8px; font-size: 12px; }
+  .skills-grid { grid-template-columns: 1fr; }
+  .skills-filters { justify-content: center; }
+  .filter-btn { padding: 0.5rem 0.8rem; font-size: 0.8rem; }
+  .filter-btn i { display: none; }
+  .work .box-container .box { height: 22rem; }
+  .experience .container { padding-left: 6.5rem; padding-right: 1rem; }
+  .experience .container::after { width: 20px; height: 20px; font-size: 1.6rem; }
+  .footer .box-container .box { margin: 1rem; }
+  .page_404 .wrapper { height: 25rem; }
+  .wrapper h1 { font-size: 5rem; }
+  .msg h3 { font-size: 2.5rem; }
+}
+
+/* ===== MOBILE X-SMALL (360px - 400px) ===== */
+@media (min-width: 361px) and (max-width: 400px) {
+  html { font-size: 50%; }
+  section { padding: 1.2rem 2%; }
+  header { padding: 0.8rem 2%; height: 4.8rem; }
+  header .logo { font-size: 1.6rem; }
+  .home { flex-direction: column-reverse; text-align: center; padding-top: 6rem; min-height: 85vh; }
+  .home .image img { max-width: 18rem; }
+  .home .content h2 { font-size: 2.2rem; }
+  .home .content p { font-size: 1.4rem; }
+  .home .btn { padding: 1.2rem 2rem; }
+  .socials { margin-top: 2rem; }
+  .social-icons a { width: 32px; height: 32px; line-height: 32px; font-size: 1.4rem; margin-right: 5px; }
+  .about .row { padding: 0.3rem; }
+  .about .row .image img { width: 14rem; margin: 0.5rem auto; }
+  .about .row .content { padding: 0.8rem; }
+  .about .row .content h3 { font-size: 1.8rem; }
+  .about .row .content p { font-size: 1.3rem; }
+  .resumebtn { margin-top: 3rem; }
+  .heading { font-size: 2rem; }
+  .education .box-container .box .image { height: 16rem; }
+  .education .box-container .box .content h3 { font-size: 1.5rem; }
+  .education h4 { font-size: 1.4rem; }
+  .work .box-container .box { height: 20rem; }
+  .research-container { padding: 0.3rem; gap: 1rem; }
+  .research-card { padding: 1rem; }
+  .contact .container .content { padding: 0.8rem; }
+  .contact form .field input, .contact form .message textarea { font-size: 1.2rem; padding: 0 8px 0 35px !important; }
+  form .field { margin: 0.6rem; }
+  form .message { margin: 0.6rem; }
+  .skills-grid { grid-template-columns: 1fr; gap: 0.8rem; }
+  .skills .container { padding: 0.8rem; }
+  .filter-btn { padding: 0.4rem 0.7rem; font-size: 0.75rem; }
+  .skill-card { padding: 1rem; }
+  .skill-icon { width: 60px; height: 60px; }
+  .skill-icon img { width: 45px; height: 45px; }
+  .skill-name { font-size: 1rem; }
+  .experience .container { padding-left: 5.5rem; padding-right: 0.8rem; }
+  .experience .container::after { width: 18px; height: 18px; font-size: 1.4rem; }
+  .footer .box-container .box h3 { font-size: 1.8rem; }
+  .page_404 .wrapper { height: 20rem; }
+  .wrapper h1 { font-size: 4rem; }
+  .msg h3 { font-size: 2rem; }
+}
+
+/* ===== MOBILE XX-SMALL (< 360px) ===== */
+@media (max-width: 360px) {
+  html { font-size: 45%; }
+  section { padding: 1rem 1.5%; }
+  header { padding: 0.6rem 1.5%; height: 4.5rem; }
+  header .logo { font-size: 1.4rem; }
+  header .logo i { font-size: 1.6rem; }
+  .home { min-height: 80vh; padding-top: 5.5rem; }
+  .home .image img { max-width: 15rem; }
+  .home .content h2 { font-size: 2rem; }
+  .home .content p { font-size: 1.3rem; }
+  .home .btn { padding: 1rem 1.6rem; margin: 2rem 0; }
+  .home .btn span { font-size: 1.3rem; }
+  .socials { margin-top: 1.5rem; }
+  .social-icons a { width: 28px; height: 28px; line-height: 28px; font-size: 1.2rem; margin-right: 4px; }
+  .about .row .image img { width: 12rem; }
+  .about .row .content { padding: 0.5rem; }
+  .about .row .content h3 { font-size: 1.6rem; }
+  .about .row .content p { font-size: 1.2rem; }
+  .heading { font-size: 1.8rem; }
+  .education .box-container .box .image { height: 14rem; }
+  .education .box-container .box .content h3 { font-size: 1.4rem; }
+  .work .box-container .box { height: 18rem; }
+  .research-card h3 { font-size: 1.2rem; }
+  .research-btn { font-size: 0.85rem; padding: 0.6rem 1rem; }
+  .contact form .field input, .contact form .message textarea { padding: 0 8px 0 32px !important; }
+  .skills-grid { gap: 0.6rem; }
+  .skill-card { padding: 0.8rem; }
+  .skill-icon { width: 50px; height: 50px; }
+  .skill-icon img { width: 38px; height: 38px; }
+  .filter-btn { padding: 0.3rem 0.6rem; font-size: 0.7rem; }
+  .experience .container { padding-left: 5rem; padding-right: 0.5rem; }
+  .experience .container::after { width: 16px; height: 16px; font-size: 1.2rem; right: auto; }
+  .footer .box-container .box h3 { font-size: 1.6rem; }
+  .footer .box-container .box p { font-size: 1.2rem; }
+  .footer .credit { font-size: 1.2rem; }
+  .page_404 .wrapper { height: 18rem; }
+  .wrapper h1 { font-size: 3.5rem; }
+  .msg h3 { font-size: 1.8rem; }
+}
+
+/* ===== LANDSCAPE MOBILE (height-constrained) ===== */
+@media (max-height: 500px) and (orientation: landscape) {
+  .home { min-height: auto; padding-top: 7rem; padding-bottom: 2rem; }
+  .home .image img { max-width: 16rem; }
+  .home .content h2 { font-size: 2.5rem; }
+  .home .content p { font-size: 1.4rem; }
+  .socials { margin-top: 2rem; }
+  .home .btn { margin: 1rem 0; }
+  section { min-height: auto; padding: 6rem 3% 2rem; }
+  .about .row .image img { width: 14rem; margin: 1rem auto; }
+  .education .box-container .box { flex-direction: row; }
+  .education .box-container .box .image { height: 18rem; flex: 1 1 18rem; }
+  #scroll-top.active { bottom: 5rem; }
+}
+
+/* ===== TABLET LANDSCAPE (height-constrained) ===== */
+@media (max-height: 600px) and (orientation: landscape) and (min-width: 768px) {
+  .home { min-height: auto; padding-top: 8rem; }
+  .home .image img { max-width: 22rem; }
+  .socials { margin-top: 3rem; }
+  section { min-height: auto; }
+}
+
+/* ===== HIGH-DPI / RETINA ===== */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  img { image-rendering: auto; }
+}
+
+/* ===== DARK MODE ADJUSTMENTS ===== */
+@media (prefers-color-scheme: dark) {
+  .research { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); }
+  .research-card { background: #1e1e36; border-color: #2d2d4a; }
+  .research-card h3 { color: #e0e0e0; }
+  .research-card p { color: #aaa; }
+  .courses .box, .blog .box, .technews .box { background: #1e1e36; }
+  .courses .box h3, .blog .box h3, .technews .box h3 { color: #e0e0e0; }
+  .courses .box p, .blog .box p, .technews .box p { color: #aaa; }
+  .contact .container { background: #1a1a2e; }
+  .contact form input, .contact form textarea { background: #2a2a3e !important; color: #e0e0e0 !important; }
+  .contact form input::placeholder, .contact form textarea::placeholder { color: rgba(255,255,255,0.5) !important; }
+  .education .box-container .box { background: #1e1e36; }
+  .education .box-container .box .content h3 { color: #e0e0e0; }
+  .education .box-container .box .content p { color: #aaa; }
+  .education { background: #12122a; }
+  .education .qoute { color: #ccc; }
+  .about { background: #16162e; }
+  .about .row .content h3 { color: #e0e0e0; }
+  .about .row .content p { color: #bbb; }
+  .about .row .content .tag { color: #aaa; }
+  #scroll-top { background: #2506ad; color: #fff; }
+}
+
+/* ===== PRINT ===== */
+@media print {
+  header, #scroll-top, .contact, .socials, .footer, #custom-tawk-wrapper,
+  .skills-filters, .backbtn, .morebtn, .viewall, .resumebtn { display: none !important; }
+  section { min-height: auto !important; padding: 1rem 0 !important; page-break-inside: avoid; }
+  body { background: #fff !important; color: #000 !important; font-size: 12pt; }
+  a { color: #000 !important; text-decoration: underline; }
+  img { max-width: 100% !important; }
+  .home .image img { border-radius: 0; }
+  .skill-card, .research-card, .courses .box, .blog .box, .technews .box,
+  .education .box-container .box { break-inside: avoid; box-shadow: none; border: 1px solid #ddd; }
+  .experience .timeline::after { display: none; }
+  .experience .container { width: 100%; padding: 10px; }
+  .experience .left, .experience .right { left: 0; }
+  .experience .container::after, .experience .container::before { display: none; }
+}
