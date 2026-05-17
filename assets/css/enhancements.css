@@ -1391,83 +1391,159 @@ header .navbar ul li a.active::before {
     }
 }
 
-/* ===== WHATSAPP FLOATING BUTTON ===== */
-.whatsapp-float {
+/* ===== TAWK.TO LIVE CHAT STYLING ===== */
+.tawk-trigger-text {
+    color: #ff7b00;
+    font-weight: 600;
+    cursor: pointer;
+    border-bottom: 2px dashed #ff7b00;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    position: relative;
+}
+
+.tawk-trigger-text:hover {
+    color: #2506ad;
+    border-bottom-color: #2506ad;
+}
+
+.tawk-status-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #a0aec0; /* gray by default */
+    display: inline-block;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.tawk-status-dot.online {
+    background-color: #48bb78; /* green */
+    box-shadow: 0 0 8px #48bb78;
+    animation: tawk-pulse 1.5s infinite;
+}
+
+.tawk-status-dot.offline {
+    background-color: #e53e3e; /* red */
+    box-shadow: 0 0 8px #e53e3e;
+}
+
+@keyframes tawk-pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(72, 187, 120, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 8px rgba(72, 187, 120, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(72, 187, 120, 0);
+    }
+}
+
+/* ===== CUSTOM TAWK.TO FLOATING BUTTON ===== */
+#custom-tawk-wrapper {
     position: fixed;
     bottom: 2rem;
     left: 2rem;
-    width: 6rem;
-    height: 6rem;
-    background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
-    color: #fff;
+    width: 60px;
+    height: 60px;
+    z-index: 9998;
+}
+
+.tawk-btn-pulse {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     border-radius: 50%;
-    text-align: center;
-    font-size: 3.5rem;
-    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
-    z-index: 999;
+    background: #ff7b00;
+    animation: tawk-pulse-glow 2s infinite;
+    z-index: -1;
+}
+
+@keyframes tawk-pulse-glow {
+    0% {
+        transform: scale(1);
+        opacity: 0.7;
+    }
+    100% {
+        transform: scale(1.6);
+        opacity: 0;
+    }
+}
+
+.custom-tawk-btn {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    background: linear-gradient(135deg, #2506ad 0%, #ff7b00 100%);
+    color: #fff;
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 10px 20px rgba(37, 6, 173, 0.4);
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    text-decoration: none;
-}
-
-.whatsapp-float:hover {
-    background: linear-gradient(135deg, #128c7e 0%, #075e54 100%);
-    transform: scale(1.1) translateY(-5px);
-    box-shadow: 0 12px 25px rgba(37, 211, 102, 0.6);
-    color: #fff;
-}
-
-.whatsapp-float i {
-    animation: pulse 2s infinite;
-}
-
-.whatsapp-tooltip {
-    position: absolute;
-    left: 7.5rem;
-    background: #075e54;
-    color: #fff;
-    padding: 0.8rem 1.2rem;
-    border-radius: 0.8rem;
-    font-size: 1.4rem;
-    font-weight: 600;
+    overflow: hidden;
     white-space: nowrap;
-    opacity: 0;
-    visibility: hidden;
+}
+
+.custom-tawk-btn:hover {
+    width: 180px;
+    justify-content: flex-start;
+    padding-left: 20px;
+    box-shadow: 0 15px 30px rgba(255, 123, 0, 0.6);
+    transform: translateY(-5px);
+}
+
+.custom-tawk-btn i {
+    font-size: 26px;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    pointer-events: none;
 }
 
-.whatsapp-tooltip::before {
-    content: '';
-    position: absolute;
-    left: -8px;
-    top: 50%;
-    transform: translateY(-50%);
-    border-width: 8px 8px 8px 0;
-    border-style: solid;
-    border-color: transparent #075e54 transparent transparent;
+.custom-tawk-btn:hover i {
+    margin-right: 12px;
 }
 
-.whatsapp-float:hover .whatsapp-tooltip {
+.custom-tawk-btn .tawk-text {
+    font-weight: 700;
+    font-size: 1.1rem;
+    opacity: 0;
+    width: 0;
+    transition: all 0.3s ease;
+}
+
+.custom-tawk-btn:hover .tawk-text {
     opacity: 1;
-    visibility: visible;
-    left: 7rem;
+    width: auto;
 }
 
 @media (max-width: 600px) {
-    .whatsapp-float {
-        width: 5rem;
-        height: 5rem;
-        font-size: 2.8rem;
+    #custom-tawk-wrapper {
         bottom: 1.5rem;
         left: 1.5rem;
+        width: 50px;
+        height: 50px;
     }
     
-    .whatsapp-tooltip {
-        display: none; /* Hide tooltip on small mobile for cleaner UI */
+    .custom-tawk-btn {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .custom-tawk-btn i {
+        font-size: 22px;
+    }
+    
+    .custom-tawk-btn:hover {
+        width: 160px;
+        padding-left: 15px;
     }
 }
 
