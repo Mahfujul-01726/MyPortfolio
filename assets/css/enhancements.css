@@ -288,7 +288,7 @@
 }
 
 #scroll-top.active {
-    bottom: 2rem;
+    bottom: 9rem;
 }
 
 /* ===== ENHANCED LOADING SKELETON ===== */
@@ -404,7 +404,7 @@
     }
 
     #scroll-top.active {
-        bottom: 1rem;
+        bottom: 8rem;
     }
 
     .home .content h2 {
@@ -1389,4 +1389,85 @@ header .navbar ul li a.active::before {
     header .navbar ul li a.active {
         color: #ff7b00 !important;
     }
-}
+}
+
+/* ===== WHATSAPP FLOATING BUTTON ===== */
+.whatsapp-float {
+    position: fixed;
+    bottom: 2rem;
+    left: 2rem;
+    width: 6rem;
+    height: 6rem;
+    background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 3.5rem;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    text-decoration: none;
+}
+
+.whatsapp-float:hover {
+    background: linear-gradient(135deg, #128c7e 0%, #075e54 100%);
+    transform: scale(1.1) translateY(-5px);
+    box-shadow: 0 12px 25px rgba(37, 211, 102, 0.6);
+    color: #fff;
+}
+
+.whatsapp-float i {
+    animation: pulse 2s infinite;
+}
+
+.whatsapp-tooltip {
+    position: absolute;
+    left: 7.5rem;
+    background: #075e54;
+    color: #fff;
+    padding: 0.8rem 1.2rem;
+    border-radius: 0.8rem;
+    font-size: 1.4rem;
+    font-weight: 600;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    pointer-events: none;
+}
+
+.whatsapp-tooltip::before {
+    content: '';
+    position: absolute;
+    left: -8px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-width: 8px 8px 8px 0;
+    border-style: solid;
+    border-color: transparent #075e54 transparent transparent;
+}
+
+.whatsapp-float:hover .whatsapp-tooltip {
+    opacity: 1;
+    visibility: visible;
+    left: 7rem;
+}
+
+@media (max-width: 600px) {
+    .whatsapp-float {
+        width: 5rem;
+        height: 5rem;
+        font-size: 2.8rem;
+        bottom: 1.5rem;
+        left: 1.5rem;
+    }
+    
+    .whatsapp-tooltip {
+        display: none; /* Hide tooltip on small mobile for cleaner UI */
+    }
+}
+
